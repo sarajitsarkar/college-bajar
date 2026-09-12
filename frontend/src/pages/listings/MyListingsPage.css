@@ -1,0 +1,52 @@
+.listings-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.listings-tab {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all var(--transition);
+}
+
+.listings-tab.active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.listing-item { display: flex; flex-direction: column; overflow: hidden; }
+
+.listing-img {
+  height: 180px;
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+.listing-img img { width: 100%; height: 100%; object-fit: cover; }
+
+.listing-no-img {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 3rem; color: var(--color-text-muted);
+}
+
+.listing-body { padding: 14px; }
+.listing-body h4 { font-weight: 700; margin-bottom: 4px; }
+.listing-price { color: var(--color-primary); font-weight: 600; margin-bottom: 8px; }
+
+.listing-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
